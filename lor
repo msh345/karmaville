@@ -1,0 +1,152 @@
+
+KarmaPoint
+  example at ./spec/models/karma_point_spec.rb:4 (FAILED - 1)
+  #valid?
+    example at ./spec/models/karma_point_spec.rb:14 (FAILED - 2)
+    example at ./spec/models/karma_point_spec.rb:11 (FAILED - 3)
+    example at ./spec/models/karma_point_spec.rb:7 (FAILED - 4)
+    example at ./spec/models/karma_point_spec.rb:13 (FAILED - 5)
+    example at ./spec/models/karma_point_spec.rb:9 (FAILED - 6)
+    example at ./spec/models/karma_point_spec.rb:12 (FAILED - 7)
+  #save
+    increments the user's total_karma by the value of the karma point (FAILED - 8)
+
+Failures:
+
+  1) KarmaPoint 
+     Failure/Error: it { should belong_to(:user) }
+     ActiveRecord::StatementInvalid:
+       PG::UndefinedTable: ERROR:  relation "karma_points" does not exist
+       LINE 5:              WHERE a.attrelid = '"karma_points"'::regclass
+                                               ^
+       :             SELECT a.attname, format_type(a.atttypid, a.atttypmod),
+                            pg_get_expr(d.adbin, d.adrelid), a.attnotnull, a.atttypid, a.atttypmod
+                     FROM pg_attribute a LEFT JOIN pg_attrdef d
+                       ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+                    WHERE a.attrelid = '"karma_points"'::regclass
+                      AND a.attnum > 0 AND NOT a.attisdropped
+                    ORDER BY a.attnum
+     # ./spec/models/karma_point_spec.rb:4:in `block (2 levels) in <top (required)>'
+
+  2) KarmaPoint#valid? 
+     Failure/Error: it { should_not allow_value(-1).for(:value) }
+     ActiveRecord::StatementInvalid:
+       PG::UndefinedTable: ERROR:  relation "karma_points" does not exist
+       LINE 5:              WHERE a.attrelid = '"karma_points"'::regclass
+                                               ^
+       :             SELECT a.attname, format_type(a.atttypid, a.atttypmod),
+                            pg_get_expr(d.adbin, d.adrelid), a.attnotnull, a.atttypid, a.atttypmod
+                     FROM pg_attribute a LEFT JOIN pg_attrdef d
+                       ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+                    WHERE a.attrelid = '"karma_points"'::regclass
+                      AND a.attnum > 0 AND NOT a.attisdropped
+                    ORDER BY a.attnum
+     # ./spec/models/karma_point_spec.rb:14:in `block (3 levels) in <top (required)>'
+
+  3) KarmaPoint#valid? 
+     Failure/Error: it { should validate_numericality_of(:value).only_integer }
+     ActiveRecord::StatementInvalid:
+       PG::UndefinedTable: ERROR:  relation "karma_points" does not exist
+       LINE 5:              WHERE a.attrelid = '"karma_points"'::regclass
+                                               ^
+       :             SELECT a.attname, format_type(a.atttypid, a.atttypmod),
+                            pg_get_expr(d.adbin, d.adrelid), a.attnotnull, a.atttypid, a.atttypmod
+                     FROM pg_attribute a LEFT JOIN pg_attrdef d
+                       ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+                    WHERE a.attrelid = '"karma_points"'::regclass
+                      AND a.attnum > 0 AND NOT a.attisdropped
+                    ORDER BY a.attnum
+     # ./spec/models/karma_point_spec.rb:11:in `block (3 levels) in <top (required)>'
+
+  4) KarmaPoint#valid? 
+     Failure/Error: it { should validate_presence_of(:user) }
+     ActiveRecord::StatementInvalid:
+       PG::UndefinedTable: ERROR:  relation "karma_points" does not exist
+       LINE 5:              WHERE a.attrelid = '"karma_points"'::regclass
+                                               ^
+       :             SELECT a.attname, format_type(a.atttypid, a.atttypmod),
+                            pg_get_expr(d.adbin, d.adrelid), a.attnotnull, a.atttypid, a.atttypmod
+                     FROM pg_attribute a LEFT JOIN pg_attrdef d
+                       ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+                    WHERE a.attrelid = '"karma_points"'::regclass
+                      AND a.attnum > 0 AND NOT a.attisdropped
+                    ORDER BY a.attnum
+     # ./spec/models/karma_point_spec.rb:7:in `block (3 levels) in <top (required)>'
+
+  5) KarmaPoint#valid? 
+     Failure/Error: it { should allow_value(1).for(:value) }
+     ActiveRecord::StatementInvalid:
+       PG::UndefinedTable: ERROR:  relation "karma_points" does not exist
+       LINE 5:              WHERE a.attrelid = '"karma_points"'::regclass
+                                               ^
+       :             SELECT a.attname, format_type(a.atttypid, a.atttypmod),
+                            pg_get_expr(d.adbin, d.adrelid), a.attnotnull, a.atttypid, a.atttypmod
+                     FROM pg_attribute a LEFT JOIN pg_attrdef d
+                       ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+                    WHERE a.attrelid = '"karma_points"'::regclass
+                      AND a.attnum > 0 AND NOT a.attisdropped
+                    ORDER BY a.attnum
+     # ./spec/models/karma_point_spec.rb:13:in `block (3 levels) in <top (required)>'
+
+  6) KarmaPoint#valid? 
+     Failure/Error: it { should validate_presence_of(:label) }
+     ActiveRecord::StatementInvalid:
+       PG::UndefinedTable: ERROR:  relation "karma_points" does not exist
+       LINE 5:              WHERE a.attrelid = '"karma_points"'::regclass
+                                               ^
+       :             SELECT a.attname, format_type(a.atttypid, a.atttypmod),
+                            pg_get_expr(d.adbin, d.adrelid), a.attnotnull, a.atttypid, a.atttypmod
+                     FROM pg_attribute a LEFT JOIN pg_attrdef d
+                       ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+                    WHERE a.attrelid = '"karma_points"'::regclass
+                      AND a.attnum > 0 AND NOT a.attisdropped
+                    ORDER BY a.attnum
+     # ./spec/models/karma_point_spec.rb:9:in `block (3 levels) in <top (required)>'
+
+  7) KarmaPoint#valid? 
+     Failure/Error: it { should allow_value(0).for(:value) }
+     ActiveRecord::StatementInvalid:
+       PG::UndefinedTable: ERROR:  relation "karma_points" does not exist
+       LINE 5:              WHERE a.attrelid = '"karma_points"'::regclass
+                                               ^
+       :             SELECT a.attname, format_type(a.atttypid, a.atttypmod),
+                            pg_get_expr(d.adbin, d.adrelid), a.attnotnull, a.atttypid, a.atttypmod
+                     FROM pg_attribute a LEFT JOIN pg_attrdef d
+                       ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+                    WHERE a.attrelid = '"karma_points"'::regclass
+                      AND a.attnum > 0 AND NOT a.attisdropped
+                    ORDER BY a.attnum
+     # ./spec/models/karma_point_spec.rb:12:in `block (3 levels) in <top (required)>'
+
+  8) KarmaPoint#save increments the user's total_karma by the value of the karma point
+     Failure/Error: let(:user) { create(:user) }
+     ActiveRecord::StatementInvalid:
+       PG::UndefinedTable: ERROR:  relation "users" does not exist
+       LINE 5:              WHERE a.attrelid = '"users"'::regclass
+                                               ^
+       :             SELECT a.attname, format_type(a.atttypid, a.atttypmod),
+                            pg_get_expr(d.adbin, d.adrelid), a.attnotnull, a.atttypid, a.atttypmod
+                     FROM pg_attribute a LEFT JOIN pg_attrdef d
+                       ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+                    WHERE a.attrelid = '"users"'::regclass
+                      AND a.attnum > 0 AND NOT a.attisdropped
+                    ORDER BY a.attnum
+     # ./spec/models/karma_point_spec.rb:18:in `block (3 levels) in <top (required)>'
+     # ./spec/models/karma_point_spec.rb:23:in `block (3 levels) in <top (required)>'
+
+Finished in 0.02312 seconds
+8 examples, 8 failures
+
+Failed examples:
+
+rspec ./spec/models/karma_point_spec.rb:4 # KarmaPoint 
+rspec ./spec/models/karma_point_spec.rb:14 # KarmaPoint#valid? 
+rspec ./spec/models/karma_point_spec.rb:11 # KarmaPoint#valid? 
+rspec ./spec/models/karma_point_spec.rb:7 # KarmaPoint#valid? 
+rspec ./spec/models/karma_point_spec.rb:13 # KarmaPoint#valid? 
+rspec ./spec/models/karma_point_spec.rb:9 # KarmaPoint#valid? 
+rspec ./spec/models/karma_point_spec.rb:12 # KarmaPoint#valid? 
+rspec ./spec/models/karma_point_spec.rb:20 # KarmaPoint#save increments the user's total_karma by the value of the karma point
+
+Randomized with seed 7262
+

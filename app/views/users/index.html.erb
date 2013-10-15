@@ -1,4 +1,14 @@
 <h1>KarmaVille's Most Famous</h1>
+
+<ul class="pagination">
+  <li><a href="#">&laquo;</a></li>
+<% @users.each do |user| %>
+  <li><a href="/?page=<%=  %>">1</a></li>
+<% end %>
+
+  <li><a href="#">&raquo;</a></li>
+</ul>
+
 <table class="table table-bordered table-striped">
   <tr>
     <th>Karma</th>
